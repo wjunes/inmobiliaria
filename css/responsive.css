@@ -1,0 +1,218 @@
+/* Estilos para pantallas más pequeñas que 1200px (Tablets en landscape) */
+
+@media (max-width: 1200px) {
+    .property-grid,
+    #houses,
+    #apartments,
+    #commercial,
+    #rural {
+        grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas */
+    }
+
+    .welcome-message h2 {
+        font-size: 36px; /* Reduce el tamaño del título */
+    }
+
+    .welcome-message p {
+        font-size: 18px; /* Reduce el tamaño del texto */
+    }
+    
+    .text-about {
+        width: 90%; /* Ajusta el ancho del texto */
+    }
+
+    .logo-left img {
+        display: none; /* Oculta el logo izquierdo */
+    }
+
+    .title .logo-left img {
+        display: none;
+    }
+
+    .title .logo-right img {
+        display: none;
+    }
+}
+
+/* Estilos para pantallas más pequeñas que 992px (Tablets en portrait) */
+@media (max-width: 992px) {
+    .property-grid,
+    #houses,
+    #apartments,
+    #commercial,
+    #rural {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+    }
+
+    header h1 {
+        font-size: 20px; /* Reduce el tamaño del título del header */
+    }
+
+    .welcome-message h2 {
+        font-size: 28px; /* Reduce más el tamaño del título */
+    }
+
+    .welcome-message p {
+        font-size: 16px; /* Reduce más el tamaño del texto */
+    }
+
+    .text-about span {
+        font-size: 1.5rem; /* Reduce el tamaño del texto destacado */
+    }
+
+    .logo-left img,
+    .logo-right img {
+        width: 3rem; /* Reduce el tamaño de los logos */
+    }
+
+    .logo-left img {
+        display: none; /* Oculta el logo izquierdo */
+    }
+
+    .title .logo-left img {
+        display: none;
+    }
+
+    .title .logo-right img {
+        display: none;
+    }
+}
+
+/* Estilos para pantallas más pequeñas que 768px (Móviles en landscape) */
+@media (max-width: 768px) {
+    .property-grid,
+    #houses,
+    #apartments,
+    #commercial,
+    #rural {
+        grid-template-columns: repeat(1, 1fr); /* Cambia a 1 columna */
+    }
+
+    header {
+        justify-content: space-between; /* Ajusta el espacio en el header */
+        padding: 0 10px; /* Reduce el padding */
+    }
+
+    header h1 {
+        font-size: 18px; /* Reduce más el tamaño del título del header */
+    }
+
+    #menu-toggle {
+        font-size: 24px; /* Reduce el tamaño del botón del menú */
+    }
+
+    .welcome-message h2 {
+        font-size: 24px; /* Reduce más el tamaño del título */
+    }
+
+    .welcome-message p {
+        font-size: 14px; /* Reduce más el tamaño del texto */
+    }
+
+    .text-about {
+        width: 95%; /* Ajusta el ancho del texto */
+    }
+
+    .text-about span {
+        font-size: 1.2rem; /* Reduce más el tamaño del texto destacado */
+    }
+
+    .logo-left img,
+    .logo-right img {
+        width: 2.5rem; /* Reduce más el tamaño de los logos */
+    }
+
+    aside {
+        width: 150px; /* Reduce el ancho del menú lateral */
+    }
+
+    .logo-left img {
+        display: none; /* Oculta el logo izquierdo */
+    }
+
+    .company-name {
+        margin-left: 4.5rem;
+    }
+
+    .title .logo-left img {
+        display: none;
+    }
+
+    .title .logo-right img {
+        display: none;
+    }
+}
+
+/* Estilos para pantallas más pequeñas que 576px (Móviles en portrait) */
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 16px; /* Reduce más el tamaño del título del header */
+    }
+
+    #menu-toggle {
+        font-size: 20px; /* Reduce más el tamaño del botón del menú */
+    }
+
+    .welcome-message h2 {
+        font-size: 20px; /* Reduce más el tamaño del título */
+    }
+
+    .welcome-message p {
+        font-size: 12px; /* Reduce más el tamaño del texto */
+    }
+
+    .text-about {
+        width: 95%; /* Ajusta más el ancho del texto */
+    }
+
+    .text-bout span {
+        font-size: 1rem; /* Reduce más el tamaño del texto destacado */
+    }
+
+    .logo-left img,
+    .logo-right img {
+        width: 2rem; /* Reduce más el tamaño de los logos */
+    }
+
+    aside {
+        width: 130px; /* Reduce más el ancho del menú lateral */
+    }
+
+    #contact-form {
+        width: 90%; /* Ajusta el ancho del formulario de contacto */
+    }
+
+    .logo-left {
+        display: none; /* Oculta el logo izquierdo */
+    }
+
+    .company-name {
+        margin-left: 4.5rem;
+    }
+
+    .title .logo-left img {
+        display: none;
+    }
+
+    .title .logo-right img {
+        display: none;
+    }
+}
+
+@media (max-width: 359px) {
+    .logo-left {
+        display: none;
+    }
+
+    .company-name {
+        margin-left: 4.5rem;
+    }
+
+    .title .logo-left img {
+        display: none;
+    }
+
+    .title .logo-right img {
+        display: none;
+    }
+}

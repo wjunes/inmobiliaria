@@ -1,0 +1,435 @@
+/* Variables CSS para los temas */
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #fff;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --hover-color: #fa7334;
+    --header-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+/* Ajustar el padding superior de las secciones para evitar superposición con el header */
+section {
+    scroll-margin-top: 7.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+a:hover,
+a:focus {
+    color: var(--hover-color);
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+header .logo img {
+    height: 3rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 32px;
+    position: fixed;
+    left: 1rem;
+}
+
+/* Barra de Navegación (Aside) */
+aside {
+    position: fixed;
+    top: 1.25rem;
+    left: -170px; /* Ocultar el menú por defecto */
+    width: 170px;
+    height: calc(100vh);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(93, 93, 93, 0.1);
+    transition: left 0.3s;
+    z-index: 1001;
+}
+
+aside.active {
+    left: 0; /* Mostrar el menú */
+}
+
+aside,
+nav,
+ul {
+    list-style: none;
+    padding: 0.3rem;
+}
+
+aside,
+nav,
+ul,
+li {
+    margin: 15px 0;
+}
+
+aside,
+nav,
+ul,
+li,
+a {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+aside,
+nav,
+ul,
+li,
+a:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+/* Sección Home */
+#home {
+    padding-top: 0;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: rgba(93, 93, 93, 0.4);
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.welcome-message {
+    z-index: 1;
+}
+
+.welcome-message h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.welcome-message p {
+    font-size: 24px;
+}
+
+.logo-left img,
+.logo-right img {
+    width: 4rem;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+}
+
+.text-about {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: r;
+    padding: 1rem;
+    background-color: var(--primary-color);;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.text-about p {
+    text-align: left;
+}
+
+.text-about ol li {
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    text-align: left;
+}
+
+.text-about span {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.text-about hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Secciones de Propiedades */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#houses {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1.75rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.property-item {
+    width: 13rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.property-item p {
+    color: var(--secondary-color);
+}
+.property-item:hover {
+    transform: scale(1.15);
+}
+
+.property-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#apartments {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+}
+
+#commercial {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+}
+
+#rural {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sección Contacto */
+#contact {
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-links {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 21%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.contact-info {
+    margin: 20px 0;
+}
+
+/* Modal del Mapa */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    max-width: 30%;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#map-button {
+    width: 21%;
+    height: 40px;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: 40px;
+}
